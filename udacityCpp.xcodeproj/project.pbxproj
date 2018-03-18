@@ -8,16 +8,57 @@
 
 /* Begin PBXBuildFile section */
 		84406454205CEE0800D04203 /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 84406453205CEE0800D04203 /* main.cpp */; };
+		84406460205CF83900D04203 /* Eigen in Frameworks */ = {isa = PBXBuildFile; fileRef = 8440645F205CF83900D04203 /* Eigen */; settings = {ATTRIBUTES = (Required, ); }; };
 /* End PBXBuildFile section */
 
+/* Begin PBXBuildRule section */
+		8440645A205CF6A300D04203 /* PBXBuildRule */ = {
+			isa = PBXBuildRule;
+			compilerSpec = com.apple.compilers.proxy.script;
+			fileType = pattern.proxy;
+			isEditable = 1;
+			outputFiles = (
+			);
+			script = "";
+		};
+		8440645B205CF6A400D04203 /* PBXBuildRule */ = {
+			isa = PBXBuildRule;
+			compilerSpec = com.apple.compilers.proxy.script;
+			fileType = pattern.proxy;
+			isEditable = 1;
+			outputFiles = (
+			);
+			script = "";
+		};
+		8440645C205CF6A500D04203 /* PBXBuildRule */ = {
+			isa = PBXBuildRule;
+			compilerSpec = com.apple.compilers.proxy.script;
+			fileType = pattern.proxy;
+			isEditable = 1;
+			outputFiles = (
+			);
+			script = "";
+		};
+		8440645D205CF6A700D04203 /* PBXBuildRule */ = {
+			isa = PBXBuildRule;
+			compilerSpec = com.apple.compilers.proxy.script;
+			fileType = pattern.proxy;
+			isEditable = 1;
+			outputFiles = (
+			);
+			script = "";
+		};
+/* End PBXBuildRule section */
+
 /* Begin PBXCopyFilesBuildPhase section */
-		8440644E205CEE0800D04203 /* CopyFiles */ = {
+		8440644E205CEE0800D04203 /* Copy Files */ = {
 			isa = PBXCopyFilesBuildPhase;
 			buildActionMask = 2147483647;
 			dstPath = /usr/share/man/man1/;
 			dstSubfolderSpec = 0;
 			files = (
 			);
+			name = "Copy Files";
 			runOnlyForDeploymentPostprocessing = 1;
 		};
 /* End PBXCopyFilesBuildPhase section */
@@ -25,6 +66,7 @@
 /* Begin PBXFileReference section */
 		84406450205CEE0800D04203 /* udacityCpp */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = udacityCpp; sourceTree = BUILT_PRODUCTS_DIR; };
 		84406453205CEE0800D04203 /* main.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = main.cpp; sourceTree = "<group>"; };
+		8440645F205CF83900D04203 /* Eigen */ = {isa = PBXFileReference; lastKnownFileType = folder; name = Eigen; path = library/Eigen; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -32,6 +74,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				84406460205CF83900D04203 /* Eigen in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -43,6 +86,7 @@
 			children = (
 				84406452205CEE0800D04203 /* udacityCpp */,
 				84406451205CEE0800D04203 /* Products */,
+				8440645E205CF83800D04203 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -62,6 +106,14 @@
 			path = udacityCpp;
 			sourceTree = "<group>";
 		};
+		8440645E205CF83800D04203 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				8440645F205CF83900D04203 /* Eigen */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -71,9 +123,13 @@
 			buildPhases = (
 				8440644C205CEE0800D04203 /* Sources */,
 				8440644D205CEE0800D04203 /* Frameworks */,
-				8440644E205CEE0800D04203 /* CopyFiles */,
+				8440644E205CEE0800D04203 /* Copy Files */,
 			);
 			buildRules = (
+				8440645D205CF6A700D04203 /* PBXBuildRule */,
+				8440645C205CF6A500D04203 /* PBXBuildRule */,
+				8440645B205CF6A400D04203 /* PBXBuildRule */,
+				8440645A205CF6A300D04203 /* PBXBuildRule */,
 			);
 			dependencies = (
 			);
@@ -233,6 +289,8 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				CODE_SIGN_STYLE = Automatic;
+				HEADER_SEARCH_PATHS = /Users/admin/Documents/udacityCpp/library/Eigen;
+				MACOSX_DEPLOYMENT_TARGET = 10.7;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Debug;
@@ -241,6 +299,12 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				CODE_SIGN_STYLE = Automatic;
+				HEADER_SEARCH_PATHS = (
+					/Users/admin/Documents/udacityCpp/library,
+					"/Users/admin/Documents/udacityCpp/library/Eigne\n",
+				);
+				"HEADER_SEARCH_PATHS[arch=*]" = "";
+				MACOSX_DEPLOYMENT_TARGET = 10.7;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Release;
